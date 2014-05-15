@@ -12,7 +12,7 @@ The vcsh-bin repo is also required. Clone with `vcsh clone git@github.com:chooki
 
 Optional
 --------
-community/i3lock (for a neat lockscreen)
+* `community/i3lock` (for a neat lockscreen)
 
 Customization
 -------------
