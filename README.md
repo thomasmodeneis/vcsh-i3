@@ -1,6 +1,6 @@
 vcsh-i3
 =======
-My configuration for the [i3 Window Manager](www.i3wm.org).
+My configuration for the [i3 Window Manager](http://www.i3wm.org).
 
 Required packages
 -----------------
