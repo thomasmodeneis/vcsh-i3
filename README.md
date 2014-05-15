@@ -8,7 +8,7 @@ Required packages
 * `community/i3status`
 * `community/ttf-inconsolata` (monospace font used system-wide)
 
-The [vcsh-bin](vcsh-bin) repo is also required. Clone with `vcsh clone git@github.com:chookies/vcsh-bin.git`
+The vcsh-bin repo is also required. Clone with `vcsh clone git@github.com:chookies/vcsh-bin.git`
 
 Optional
 --------
@@ -16,7 +16,7 @@ Optional
 
 Customization
 -------------
-* In [.i3/status.conf](vcsh-i3/tree/master/.i3/status.conf): change the `wireless` and `ethernet` names to match your system
+* In [.i3/status.conf](.i3/status.conf): change the `wireless` and `ethernet` names to match your system
 
 You are free to fork and edit to your liking!
 
