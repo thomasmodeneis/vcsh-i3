@@ -13,6 +13,8 @@ The vcsh-bin repo is also required. Clone with `vcsh clone git@github.com:chooki
 Optional
 --------
 * `community/i3lock` (for a neat lockscreen)
+* `xfce4-power-manager` (for a nice battery tray icon)
+* `aur/volumeicon-xfce` (volume control tray icon with disabled notify support)
 
 Customization
 -------------
