@@ -25,6 +25,9 @@ bindsym $mod+n exec "urxvt -e ranger"
 # refresh X windows
 bindsym $mod+q exec "xrefresh"
 
+# lock screen shortcut
+bindsym $mod+Ctrl+l exec "i3lock-wrapper"
+
 # power control shortcuts
 bindsym $mod+p exec "sleep 1; xset dpms force off"
 bindsym $mod+Ctrl+p exec "systemctl suspend"
@@ -61,14 +64,22 @@ assign [class="Gvim"] $editor
 assign [title="LibreOffice"] $editor
 assign [title="UMLet"] $editor
 assign [title="yEd"] $editor
+assign [class="jetbrains-idea"] $editor
+assign [class="NetBeans"] $editor
 assign [class="Evince"] $docs
+assign [class="Zathura"] $docs
 assign [class="feh"] $media
+assign [class="Sxiv"] $media
 assign [class="Spotify"] $media
 assign [class="Vlc"] $media
 assign [class="Skype"] $chat
+assign [class="Sialan Telegram"] $chat
 
 # hacky workspace bindings, use caution
-assign [window_role="crx_clhhggbfdinjmjhajaheehoeibfljjno"] $chat # Webogram
+assign [window_role="pop-up"] $chat # Hangouts
+
+# force float on some windows
+for_window [class="Volumeicon"] floating enable
 
 # change focus
 bindsym $mod+h focus left
@@ -160,7 +171,7 @@ bindsym $mod+t mode "resize"
 mode "jump" {
 	bindsym s [class="Skype"] focus
 	bindsym g [class="Gvim"] focus
-	bindsym c [class="Chromium"] focus
+	bindsym c [class="Firefox"] focus
 	bindsym v [class="Vlc"] focus
 
 	# back to normal: Enter or Escape
@@ -186,7 +197,7 @@ bar {
         background #00222b
         statusline #fdf6e3
 
-        focused_workspace  	#07558C #268bd2 #fdf6e3
+        focused_workspace  	#268bd2 #268bd2 #fdf6e3
         inactive_workspace 	#00222b #00222b #839496
         active_workspace	#00222b #00222b #839496
         urgent_workspace	#073642 #073642 #eee8d5
