@@ -5,20 +5,16 @@ My configuration for the [i3 Window Manager](http://www.i3wm.org).
 Required packages
 -----------------
 * `community/i3-wm`
-* `community/i3status`
-* `community/ttf-inconsolata` (monospace font used system-wide)
+* `aur/i3blocks` (nice & light menubar)
+* `community/ttf-inconsolata`
+* `community/ttf-font-awesome` (for icons)
 
 The vcsh-bin repo is also required. Clone with `vcsh clone git@github.com:chookies/vcsh-bin.git`
 
-Optional
---------
-* `community/i3lock` (for a neat lockscreen)
-* `xfce4-power-manager` (for a nice battery tray icon)
-* `aur/volumeicon-xfce` (volume control tray icon with disabled notify support)
-
-Customization
+Configuration
 -------------
-* In [.i3/status.conf](.i3/status.conf): change the `wireless` and `ethernet` names to match your system
+* In [.config/i3/scripts/wifi](.config/i3/scripts/wifi): change the `INTERFACE` to match your 
+system's
 
 You are free to fork and edit to your liking!
 
