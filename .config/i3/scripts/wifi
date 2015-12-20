@@ -16,7 +16,7 @@
 
 #------------------------------------------------------------------------
 
-INTERFACE="wlp2s0"
+INTERFACE="wlp3s0"
 
 # If the interface is down exit
 [[ "$(cat /sys/class/net/$INTERFACE/operstate)" = 'down' ]] && exit
