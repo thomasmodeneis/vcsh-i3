@@ -16,7 +16,7 @@
 
 #------------------------------------------------------------------------
 
-INTERFACE="wlp2s0"
+INTERFACE="wlp3s0"
 
 SOFT_BLOCKED=$(rfkill list 1 | grep "Soft blocked: yes")
 
