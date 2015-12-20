@@ -234,9 +234,9 @@ mode "$mode_gaps_outer" {
 }
 
 # default monitor for workspace
-workspace $workspace1 output DP1-2
-workspace $workspace2 output DP1-2
-workspace $workspace3 output DP1-2
+workspace $workspace1 output DP1
+workspace $workspace2 output DP1
+workspace $workspace3 output DP1
 workspace $workspace4 output eDP1
 workspace $workspace5 output eDP1
 workspace $workspace6 output eDP1
