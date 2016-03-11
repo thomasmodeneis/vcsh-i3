@@ -18,17 +18,29 @@
 
 INTERFACE="wlp2s0"
 
-# If the interface is down exit
-[[ "$(cat /sys/class/net/$INTERFACE/operstate)" = 'down' ]] && exit
+SOFT_BLOCKED=$(rfkill list 1 | grep "Soft blocked: yes")
+
+# If the interface is softblocked
+if [[ $SOFT_BLOCKED != "" ]]; then
+  echo "WiFi softblock"
+  exit
+fi
+
+# If the interface is down
+if [[ "$(cat /sys/class/net/$INTERFACE/operstate)" = 'down' ]]; then
+  echo "WiFi down"
+  exit
+fi
 
 QUALITY=$(iwlist $INTERFACE scan | awk '/Quality/ {split($1,a,"="); split(a[2],b,"/"); print int(b[1] * 100 / 70)}' | tail -n1)
 SSID=$(iwlist $INTERFACE scan | awk '/ESSID/ {split($1,a,"\""); print a[2]}')
+SOFT_BLOCKED=$(rfkill list 1 | grep "Soft blocked: yes")
 
 # If the length is too long
 if [ "${#SSID}" -gt "32" ]; then
-	echo "Scanning..."
-	echo "Scanning..."
-	echo \#FFF600
+  echo "Scanning..."
+  echo "Scanning..."
+  echo \#FFF600
 fi
 
 #------------------------------------------------------------------------
@@ -38,11 +50,11 @@ echo $QUALITY% # short text
 
 # color
 if [[ $QUALITY -ge 80 ]]; then
-    echo "#00FF00"
+  echo "#00FF00"
 elif [[ $QUALITY -lt 80 ]]; then
-    echo "#FFF600"
+  echo "#FFF600"
 elif [[ $QUALITY -lt 60 ]]; then
-    echo "#FFAE00"
+  echo "#FFAE00"
 elif [[ $QUALITY -lt 40 ]]; then
-    echo "#FF0000"
+  echo "#FF0000"
 fi
