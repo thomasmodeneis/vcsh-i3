@@ -1,0 +1,15 @@
+#!/bin/bash
+
+STAY_ALIVE="/tmp/.stay_alive"
+
+case $BLOCK_BUTTON in
+  1) ~/.local/bin/stayalive-toggle
+esac
+
+if [[ -e $STAY_ALIVE && `cat $STAY_ALIVE` = "enabled" ]]; then
+  echo 
+else
+  echo 
+  echo 
+  echo \#676E7D
+fi
