@@ -157,11 +157,10 @@ set $urgent-bg-color     #E53935
 bar {
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
         tray_output none
-        font pango: FontAwesome 10
+        font pango: Cantarell, FontAwesome 10.5
 
         # My bar options
         position top
-        height 22
 
         colors {
                 background $bg-color
