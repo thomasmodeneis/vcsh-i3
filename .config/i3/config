@@ -248,6 +248,7 @@ workspace $workspace10 output eDP1
 
 # Assign applications to their workspaces
 assign [class="(?i)firefox"] $workspace1
+assign [class="(?i)chromium"] $workspace1
 assign [class="(?i)emacs"] $workspace3
 assign [class="(?i)jetbrains-idea-ce"] $workspace3
 assign [class="(?i)jetbrains-webstorm"] $workspace3
@@ -255,7 +256,7 @@ assign [class="(?i)feh"] $workspace4
 assign [class="(?i)evince"] $workspace4
 assign [class="(?i)mcomix"] $workspace4
 assign [class="(?i)mupdf"] $workspace4
-assign [title="(?i)spotify"] $workspace5
+assign [class="(?i)spotify"] $workspace5
 assign [class="(?i)steam"] $workspace5
 assign [class="(?i)telegram"] $workspace6
 assign [title="(?i)signal"] $workspace6
