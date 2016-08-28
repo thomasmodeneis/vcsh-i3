@@ -157,7 +157,8 @@ set $urgent-bg-color     #E53935
 bar {
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
         tray_output none
-        font pango: Cantarell, FontAwesome 10.5
+        font pango: Cantarell 10, FontAwesome 10
+        height 25
 
         # My bar options
         position top
