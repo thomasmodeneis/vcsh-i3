@@ -240,7 +240,7 @@ workspace $workspace1 output HDMI2
 workspace $workspace2 output HDMI2
 workspace $workspace3 output HDMI2
 workspace $workspace4 output eDP1
-workspace $workspace5 output eDP1
+workspace $workspace5 output HDMI2
 workspace $workspace6 output eDP1
 workspace $workspace7 output eDP1
 workspace $workspace8 output eDP1
@@ -248,17 +248,22 @@ workspace $workspace9 output eDP1
 workspace $workspace10 output eDP1
 
 # Assign applications to their workspaces
+# Chromium based apps first, so their workspace gets preference
+assign [title="(?i)signal"] $workspace6
+assign [class="(?i)slack"] $workspace6
+
+# Other assignments
 assign [class="(?i)firefox"] $workspace1
 assign [class="(?i)chromium"] $workspace1
 assign [class="(?i)emacs"] $workspace3
 assign [class="(?i)jetbrains-idea-ce"] $workspace3
 assign [class="(?i)jetbrains-webstorm"] $workspace3
+assign [class="(?i)libreoffice"] $workspace4
 assign [class="(?i)feh"] $workspace4
 assign [class="(?i)evince"] $workspace4
 assign [class="(?i)mcomix"] $workspace4
 assign [class="(?i)mupdf"] $workspace4
 assign [class="(?i)spotify"] $workspace5
 assign [class="(?i)steam"] $workspace5
+assign [class="(?i)kodi"] $workspace5
 assign [class="(?i)telegram"] $workspace6
-assign [title="(?i)signal"] $workspace6
-assign [class="(?i)slack"] $workspace6
